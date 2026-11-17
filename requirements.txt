@@ -2,3 +2,9 @@ setuptools
 pandas
 numpy
 seaborn
+matplotlib
+warnings
+scikit-learn
+catboost
+xgboost
+#-e .
