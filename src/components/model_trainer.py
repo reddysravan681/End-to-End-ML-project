@@ -46,7 +46,6 @@ class ModelTrainer:
                 "CatBoosting Regressor": CatBoostRegressor(verbose=False),
                 "AdaBoost Regressor": AdaBoostRegressor(),
             }
-<<<<<<< HEAD
             params={
                 "Decision Tree": {
                     'criterion':['squared_error', 'absolute_error', 'poisson'],
@@ -87,11 +86,6 @@ class ModelTrainer:
 
             model_report:dict=evaluate_models(X_train=X_train,y_train=y_train,X_test=X_test,y_test=y_test,
                                              models=models,param=params)
-=======
-            
-            model_report:dict=evaluate_models(X_train=X_train,y_train=y_train,X_test=X_test,y_test=y_test,
-                                             models=models)
->>>>>>> f87fa19 (Model training Done)
             
             ## To get best model score from dict
             best_model_score = max(sorted(model_report.values()))
@@ -118,8 +112,5 @@ class ModelTrainer:
             return r2_square
             
 
-
-
-            
         except Exception as e:
             raise CustomException(e,sys)

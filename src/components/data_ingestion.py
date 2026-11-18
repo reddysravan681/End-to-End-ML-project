@@ -12,12 +12,9 @@ from sklearn.model_selection import train_test_split
 from dataclasses import dataclass
 
 from src.components.data_transformation import DataTransformation
-<<<<<<< HEAD
 from src.components.data_transformation import DataTransformationConfig
 
 from src.components.model_trainer import ModelTrainerConfig
-=======
->>>>>>> f87fa19 (Model training Done)
 from src.components.model_trainer import ModelTrainer
 @dataclass
 class DataIngestionConfig:
@@ -65,9 +62,6 @@ if __name__=="__main__":
 
     modeltrainer=ModelTrainer()
     print(modeltrainer.initiate_model_trainer(train_arr,test_arr))
-<<<<<<< HEAD
 
 
 
-=======
->>>>>>> f87fa19 (Model training Done)

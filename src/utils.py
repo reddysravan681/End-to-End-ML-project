@@ -6,14 +6,11 @@ from sklearn.metrics import r2_score
 from sklearn.model_selection import GridSearchCV
 
 from src.exception import CustomException
-<<<<<<< HEAD
-=======
 #import dill
 from sklearn.metrics import r2_score
 
 
 
->>>>>>> f87fa19 (Model training Done)
 
 def save_object(file_path, obj):
     try:
@@ -26,28 +23,19 @@ def save_object(file_path, obj):
 
     except Exception as e:
         raise CustomException(e, sys)
-<<<<<<< HEAD
     
 def evaluate_models(X_train, y_train,X_test,y_test,models,param):
-=======
-
-def evaluate_models(X_train, y_train,X_test,y_test,models):
->>>>>>> f87fa19 (Model training Done)
     try:
         report = {}
 
         for i in range(len(list(models))):
             model = list(models.values())[i]
-<<<<<<< HEAD
             para=param[list(models.keys())[i]]
 
             gs = GridSearchCV(model,para,cv=3)
             gs.fit(X_train,y_train)
 
             model.set_params(**gs.best_params_)
-=======
-
->>>>>>> f87fa19 (Model training Done)
             model.fit(X_train,y_train)
 
             #model.fit(X_train, y_train)  # Train model
@@ -62,7 +50,6 @@ def evaluate_models(X_train, y_train,X_test,y_test,models):
 
             report[list(models.keys())[i]] = test_model_score
 
-<<<<<<< HEAD
         return report
 
     except Exception as e:
@@ -78,8 +65,3 @@ def load_object(file_path):
 
 
      
-=======
-        return report    
-    except Exception as e:
-        raise CustomException(e, sys)
->>>>>>> f87fa19 (Model training Done)
